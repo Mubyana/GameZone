@@ -4,33 +4,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ?>
-<?php 
-// Run a select query to get my letest 6 items
-// Connect to the MySQL database  
-include "storescripts/connect_to_mysql.php"; 
-$dynamicList = "";
-$sql = mysql_query("SELECT * FROM product ORDER BY date_added DESC LIMIT 6");
-$productCount = mysql_num_rows($sql); // count the output amount
-if ($productCount > 0) {
-	while($row = mysql_fetch_array($sql)){ 
-             $id = $row["id"];
-			 $product_name = $row["product_name"];
-			 $price = $row["price"];
-			 $date_added = strftime("%b %d, %Y", strtotime($row["date_added"]));
-			 $dynamicList .= '<table width="100%" border="0" cellspacing="0" cellpadding="6">
-        <tr>
-          <td width="17%" valign="top"><a href="product.php?"><img style="border:#666 1px solid;" src="inventory_images/' . $id . '.jpg" alt="' . $product_name . '" width="77" height="102" border="1" /></a></td>
-          <td width="83%" valign="top">'.$product_name.'<br />
-          $'.$price.'<br/>
-            <a href="product.php?id=' .$id.'">View Product Details</a></td>
-        </tr>
-      </table>';
-    }
-} else {
-	$dynamicList = "We have no products listed in our store yet";
-}
-mysql_close();
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
