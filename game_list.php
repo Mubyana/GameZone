@@ -83,15 +83,15 @@ mysql_close();
 		    <select name="subcategory" onchange="this.form.submit();">
 		    <option value="select">Select</option>
 		    <option value="all">All</option>
-            <option value="mission">Mission</option>
-            <option value="racing">Racing </option>
-            <option value="fighting">Fighting </option>
-            <option value="first_person_shooter">First person shooter</option>
-            <option value="third_person_shooter">Third person shooter</option>
-            <option value="soccer">Football</option>
-            <option value="basketball">Basketball</option>
-            <option value="hockey">Hockey</option>
-            </select>
+                    <option value="mission">Mission</option>
+                    <option value="racing">Racing </option>
+                    <option value="fighting">Fighting </option>
+                    <option value="first_person_shooter">First person shooter</option>
+                    <option value="third_person_shooter">Third person shooter</option>
+                    <option value="soccer">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="hockey">Hockey</option>
+              </select>
        </form>
     </td>	
   </tr>
