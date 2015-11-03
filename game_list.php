@@ -24,8 +24,8 @@ if(isset($_POST['subcategory']))
 	{ 
 	    $sql = mysql_query("SELECT * FROM product WHERE category LIKE 'Game' AND subcategory LIKE '$subcat' ORDER BY product_name DESC ");
 	}
-    else
-    {
+        else
+        {
 	$sql = mysql_query("SELECT * FROM product WHERE category LIKE 'Game' ORDER BY product_name DESC ");
 	}
   }else
